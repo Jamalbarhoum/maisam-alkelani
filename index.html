@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ميسّم الكيلاني | دعم نفسي وصحة نفسية</title>
+<meta name="description" content="Maisam Alkelani — psychological support and mental wellbeing. Online sessions in a private, calm and respectful space.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Lora:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#fbf8f1; --offwhite:#f4efe4; --sand:#e8dcc6; --beige:#d9c8a9;
+  --sage:#b9c7aa; --sage-soft:#dde5d1; --olive:#7a8456; --rose:#d4a9a0; --rose-soft:#f1e0db;
+  --forest:#25402f; --forest-2:#35563f; --ink:#2b3a30; --muted:#66705f;
+  --radius:28px; --shadow:0 18px 50px -24px rgba(37,64,47,.35);
+  --font-head:"Amiri","Lora",serif; --font-body:"IBM Plex Sans Arabic","Inter",system-ui,sans-serif;
+}
+html[lang="en"]{--font-head:"Lora","Amiri",serif;--font-body:"Inter","IBM Plex Sans Arabic",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink);font-family:var(--font-body);line-height:1.85;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--font-head);color:var(--forest);font-weight:700;line-height:1.3}
+h1{font-size:clamp(2.2rem,5vw,3.6rem)} h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:.6rem} h3{font-size:1.35rem}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:96px 0;position:relative}
+.eyebrow{display:inline-block;font-size:.85rem;letter-spacing:.08em;color:var(--olive);font-weight:600;margin-bottom:.6rem}
+.lead{color:var(--muted);max-width:62ch}
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(251,248,241,.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(217,200,169,.5)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{font-family:var(--font-head);font-size:1.4rem;color:var(--forest);text-decoration:none;font-weight:700}
+nav ul{display:flex;gap:22px;list-style:none;padding:0}
+nav a{text-decoration:none;font-size:.92rem;color:var(--muted);transition:color .3s}
+nav a:hover{color:var(--forest)}
+.lang{border:1px solid var(--beige);background:transparent;border-radius:999px;padding:6px 16px;cursor:pointer;font:inherit;font-size:.85rem;color:var(--forest)}
+@media(max-width:860px){nav ul{display:none}}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:999px;text-decoration:none;font-weight:500;transition:transform .35s ease,box-shadow .35s ease,background .35s;border:1.5px solid transparent;font-size:1rem}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--forest);color:var(--ivory);box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--forest-2)}
+.btn-ghost{border-color:var(--forest);color:var(--forest)}
+.btn-ghost:hover{background:var(--sage-soft)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible,.lang:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+/* hero */
+.hero{padding:72px 0 110px;background:radial-gradient(900px 500px at 85% 0%,var(--sage-soft),transparent 70%),radial-gradient(700px 400px at 0% 100%,var(--rose-soft),transparent 70%),var(--ivory);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero p.intro{font-size:1.15rem;color:var(--muted);margin:20px 0 32px;max-width:54ch}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.note{margin-top:22px;font-size:.88rem;color:var(--muted);display:flex;gap:8px;align-items:center}
+.portrait{position:relative;aspect-ratio:4/5;max-width:400px;margin-inline:auto;width:100%}
+.portrait .blob{position:absolute;inset:-6% -8% -4% -8%;background:var(--sage);border-radius:62% 38% 55% 45%/48% 58% 42% 52%;opacity:.55;animation:morph 18s ease-in-out infinite}
+.portrait .frame{position:absolute;inset:0;border-radius:200px 200px 36px 36px;overflow:hidden;background:linear-gradient(160deg,var(--sand),var(--sage-soft));box-shadow:var(--shadow);display:grid;place-items:center}
+.portrait img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.portrait .ph{font-family:var(--font-head);font-size:6rem;color:var(--forest);opacity:.55}
+@keyframes morph{50%{border-radius:42% 58% 40% 60%/58% 42% 58% 42%;transform:rotate(4deg)}}
+.leaf{position:absolute;opacity:.5;pointer-events:none}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.portrait{order:-1;max-width:290px}section{padding:72px 0}}
+/* cards */
+.grid{display:grid;gap:22px;margin-top:40px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--offwhite);border-radius:var(--radius);padding:30px;border:1px solid rgba(217,200,169,.55);transition:transform .4s ease,box-shadow .4s ease}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card .ic{width:46px;height:46px;border-radius:16px;background:var(--sage-soft);display:grid;place-items:center;margin-bottom:16px;color:var(--forest)}
+.card p{color:var(--muted);font-size:.97rem}
+.alt{background:var(--offwhite)}
+.alt .card{background:var(--ivory)}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.quote{font-family:var(--font-head);font-size:1.5rem;color:var(--forest);border-inline-start:3px solid var(--rose);padding-inline-start:22px;line-height:1.7}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:30px}}
+/* timeline */
+.timeline{margin-top:40px;position:relative;padding-inline-start:30px;border-inline-start:2px solid var(--sage)}
+.tl{position:relative;margin-bottom:34px}
+.tl::before{content:"";position:absolute;inset-inline-start:-39px;top:9px;width:14px;height:14px;border-radius:50%;background:var(--ivory);border:3px solid var(--olive)}
+.tl .when{font-size:.85rem;color:var(--olive);font-weight:600}
+.tl h3{margin:2px 0}
+.tl .org{color:var(--muted);font-size:.95rem}
+.tl .vol{display:inline-block;background:var(--rose-soft);color:#8a5a52;border-radius:999px;padding:1px 12px;font-size:.78rem;margin-inline-start:8px}
+/* steps */
+.steps{counter-reset:s}
+.step{counter-increment:s;position:relative;padding-top:54px}
+.step::before{content:counter(s);position:absolute;top:22px;inset-inline-start:30px;font-family:var(--font-head);font-size:2rem;color:var(--rose)}
+/* faq */
+details{background:var(--ivory);border:1px solid rgba(217,200,169,.6);border-radius:20px;padding:20px 26px;margin-bottom:14px;transition:background .3s}
+details[open]{background:var(--sage-soft)}
+summary{cursor:pointer;font-weight:600;color:var(--forest);list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--olive)}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;color:var(--muted)}
+/* contact */
+.contact{background:var(--forest);color:var(--ivory);text-align:center;overflow:hidden}
+.contact h2{color:var(--ivory)} .contact .lead{color:#cfd9c7;margin:0 auto 32px}
+.contact .btn-primary{background:var(--ivory);color:var(--forest)}
+.contact .btn-ghost{border-color:var(--sage);color:var(--ivory)}
+footer{background:#1c3024;color:#a9b8a0;font-size:.85rem;padding:28px 0;text-align:center}
+footer p{max-width:70ch;margin:0 auto 6px}
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity 1s ease,transform 1s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#top" data-i="brand">ميسّم الكيلاني</a>
+  <nav><ul>
+    <li><a href="#about" data-i="n1">نبذة</a></li>
+    <li><a href="#background" data-i="n2">الخبرة</a></li>
+    <li><a href="#expertise" data-i="n3">المجالات</a></li>
+    <li><a href="#services" data-i="n4">الجلسات</a></li>
+    <li><a href="#faq" data-i="n5">أسئلة شائعة</a></li>
+    <li><a href="#contact" data-i="n6">تواصل</a></li>
+  </ul></nav>
+  <button class="lang" id="lang" type="button" aria-label="Switch language">English</button>
+</div></header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <svg class="leaf" style="top:40px;inset-inline-start:2%;width:130px" viewBox="0 0 100 100" fill="none" stroke="#7a8456" stroke-width="1.2" aria-hidden="true"><path d="M50 95C50 60 52 30 50 5M50 70C35 62 28 50 26 38c14 2 24 12 24 32zM50 55c14-6 22-17 24-30-14 2-24 12-24 30z"/></svg>
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <span class="eyebrow" data-i="h_eye">دعم نفسي · صحة نفسية وعافية</span>
+      <h1 data-i="h_title">مساحة هادئة وآمنة، لتسمعي نفسك وتُسمعي.</h1>
+      <p class="intro" data-i="h_intro">أؤمن أن صحتنا النفسية تنعكس على صحتنا الجسدية وعلى جودة حياتنا. أرافقك في جلسات دعم نفسي عن بُعد، بخصوصية واحترام وبدون أحكام.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact" data-i="h_cta1">احجزي جلسة أونلاين</a>
+        <a class="btn btn-ghost" data-wa href="#contact"><span data-i="h_cta2">تواصل عبر واتساب</span></a>
+      </div>
+      <p class="note"><span aria-hidden="true">🔒</span><span data-i="h_note">الخصوصية والسرّية جزء أساسي من عملي.</span></p>
+    </div>
+    <div class="portrait rv">
+      <div class="blob"></div>
+      <div class="frame">
+        <span class="ph" aria-hidden="true">م</span>
+        <img src="assets/portrait.jpg" alt="ميسّم الكيلاني" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about"><div class="wrap about-grid">
+  <div class="rv"><span class="eyebrow" data-i="a_eye">عن ميسّم</span><h2 data-i="a_title">رحلة مهنية بدأت من الإيمان بالعافية النفسية</h2></div>
+  <div class="rv">
+    <p class="quote" data-i="a_quote">"أؤمن أن الصحة النفسية تلعب دوراً كبيراً في صحتنا الجسدية، ولذلك اخترت تخصص الصحة النفسية والعافية، لأساعد الآخرين على الحفاظ على حالة نفسية صحية نحو حياة أفضل وأسعد."</p>
+    <p class="lead" style="margin-top:22px" data-i="a_p">عملتُ منذ عام 2021 مع أطفال وأسر ومجتمعات في الأردن في مجالات الإرشاد النفسي وحماية الطفل وإدارة الحالات، مع مؤسسات مثل مؤسسة الملك حسين، والإنترناشونال ميديكال كور، وجمعية الحسين.</p>
+  </div>
+</div></section>
+
+<!-- BACKGROUND -->
+<section id="background" class="alt"><div class="wrap">
+  <span class="eyebrow rv" data-i="b_eye">الخلفية المهنية</span>
+  <h2 class="rv" data-i="b_title">الخبرة العملية</h2>
+  <div class="timeline">
+    <div class="tl rv"><div class="when" data-i="t1w">آب 2025 – كانون الثاني 2026</div><h3 data-i="t1h">أخصائية نفسية</h3><div class="org">JOHUD · <span data-i="loc">الأردن</span></div></div>
+    <div class="tl rv"><div class="when" data-i="t2w">أيلول 2023 – حزيران 2025</div><h3 data-i="t2h">مرشدة حماية الطفل</h3><div class="org">International Medical Corps · <span data-i="t2o">دوام كامل · الأردن</span></div></div>
+    <div class="tl rv"><div class="when" data-i="t3w">شباط 2023 – أيلول 2023</div><h3 data-i="t3h">مرشدة نفسية</h3><div class="org">King Hussein Foundation · <span data-i="loc2">الأردن</span></div></div>
+    <div class="tl rv"><div class="when" data-i="t4w">تموز 2022 – شباط 2023</div><h3 data-i="t4h">مديرة حالات</h3><div class="org">King Hussein Foundation</div></div>
+    <div class="tl rv"><div class="when" data-i="t5w">آب 2021 – كانون الثاني 2022</div><h3 data-i="t5h">مرشدة نفسية <span class="vol" data-i="vol">تطوع</span></h3><div class="org">Step by Step for Special Needs · <span data-i="t5o">مرافقة أطفال وأهاليهم</span></div></div>
+    <div class="tl rv"><div class="when" data-i="t6w">شباط 2021 – حزيران 2021</div><h3 data-i="t6h">مرشدة نفسية</h3><div class="org">Digital American Schools · <span data-i="t6o">دوام جزئي</span></div></div>
+  </div>
+</div></section>
+
+<!-- EXPERTISE -->
+<section id="expertise"><div class="wrap">
+  <span class="eyebrow rv" data-i="e_eye">مجالات الخبرة</span>
+  <h2 class="rv" data-i="e_title">حيث عملتُ وتعلّمتُ</h2>
+  <div class="grid g3">
+    <div class="card rv"><div class="ic">🌿</div><h3 data-i="e1h">الإرشاد والدعم النفسي</h3><p data-i="e1p">الاستماع والمرافقة ودعم الأفراد في تجاربهم وتحدياتهم اليومية.</p></div>
+    <div class="card rv"><div class="ic">🌱</div><h3 data-i="e2h">حماية الطفل</h3><p data-i="e2p">خبرة ميدانية في دعم الأطفال والأسر ضمن برامج حماية الطفل.</p></div>
+    <div class="card rv"><div class="ic">🤍</div><h3 data-i="e3h">إدارة الحالات</h3><p data-i="e3p">متابعة الحالات وإعداد خطط الرعاية بالتنسيق مع الأسرة والجهات المعنية.</p></div>
+    <div class="card rv"><div class="ic">🍃</div><h3 data-i="e4h">الأطفال وأولياء الأمور</h3><p data-i="e4p">عمل تطوعي مع أطفال لديهم احتياجات خاصة وذويهم.</p></div>
+  </div>
+</div></section>
+
+<!-- SERVICES -->
+<section id="services" class="alt"><div class="wrap">
+  <span class="eyebrow rv" data-i="s_eye">الخدمات والجلسات</span>
+  <h2 class="rv" data-i="s_title">جلسات دعم نفسي عن بُعد</h2>
+  <p class="lead rv" data-i="s_lead">مساحة للحديث والاستماع والتفكير بما يشغلك، بإيقاع يناسبك. مدة الجلسة والتكلفة والمواعيد تُحدَّد معاً عبر واتساب.</p>
+  <div class="grid g3">
+    <div class="card rv"><h3 data-i="s1h">جلسة تعارف</h3><p data-i="s1p">لقاء أولي نتعرف فيه، وتحددين ما تحتاجينه وما يناسبك.</p></div>
+    <div class="card rv"><h3 data-i="s2h">جلسات دعم فردية</h3><p data-i="s2p">جلسات إرشاد ودعم نفسي أونلاين في مساحة خاصة وسرّية.</p></div>
+    <div class="card rv"><h3 data-i="s3h">إرشاد لأولياء الأمور</h3><p data-i="s3p">حوار داعم حول مرافقة الأطفال والتعامل مع تحديات التربية.</p></div>
+  </div>
+  <p class="note rv" style="margin-top:28px" data-i="s_note">هذه الجلسات لا تُقدَّم كتشخيص أو علاج طبي، ولا تغني عن الرعاية الطبية أو الطوارئ.</p>
+</div></section>
+
+<!-- APPROACH -->
+<section id="approach"><div class="wrap about-grid">
+  <div class="rv"><span class="eyebrow" data-i="p_eye">أسلوبي</span><h2 data-i="p_title">الأمان أولاً</h2></div>
+  <div class="rv">
+    <p class="lead" data-i="p_p1">أؤمن أن الإنسان يستحق أن يُسمَع دون أحكام. أبني الجلسة على الاحترام والاستماع الحقيقي والسرّية، وأمشي بخطوتك أنتِ، بدون ضغط وبدون وعود جاهزة.</p>
+    <p class="lead" style="margin-top:14px" data-i="p_p2">الصحة النفسية والجسدية مترابطتان، لذلك نهتم بالصورة الكاملة: مشاعرك وعاداتك ومحيطك.</p>
+  </div>
+</div></section>
+
+<!-- ONLINE -->
+<section id="online" class="alt"><div class="wrap">
+  <span class="eyebrow rv" data-i="o_eye">الجلسات الأونلاين</span>
+  <h2 class="rv" data-i="o_title">كيف تتم الجلسة؟</h2>
+  <div class="grid g3 steps">
+    <div class="card step rv"><h3 data-i="o1h">راسليني</h3><p data-i="o1p">تواصلي عبر واتساب وأخبريني بما يناسبك من مواعيد.</p></div>
+    <div class="card step rv"><h3 data-i="o2h">نرتّب الموعد</h3><p data-i="o2p">نتفق على الوقت والمدة، وأرسل لك رابط الجلسة.</p></div>
+    <div class="card step rv"><h3 data-i="o3h">نلتقي عن بُعد</h3><p data-i="o3p">من مكان تشعرين فيه بالراحة والخصوصية، عبر الإنترنت.</p></div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section id="faq"><div class="wrap" style="max-width:780px">
+  <span class="eyebrow rv" data-i="f_eye">أسئلة شائعة</span>
+  <h2 class="rv" data-i="f_title">قبل أن تبدئي</h2>
+  <div style="margin-top:30px" class="rv">
+    <details><summary data-i="q1">هل ما أقوله سرّي؟</summary><p data-i="a1">نعم، السرّية أساس في عملي. ما يُقال في الجلسة يبقى بينك وبيني، إلا في حالات خطر حقيقي على سلامتك أو سلامة الآخرين، وسأوضح ذلك لك مسبقاً.</p></details>
+    <details><summary data-i="q2">كيف أحجز جلسة؟</summary><p data-i="a2">راسليني على واتساب، ونتفق على موعد مناسب.</p></details>
+    <details><summary data-i="q3">كم مدة الجلسة وتكلفتها؟</summary><p data-i="a3">تُحدَّد التفاصيل معاً عند التواصل، بما يناسب احتياجك.</p></details>
+    <details><summary data-i="q4">هل هذه جلسات علاج أو تشخيص؟</summary><p data-i="a4">لا. الجلسات إرشاد ودعم نفسي، وليست تشخيصاً أو علاجاً طبياً. وإن احتجتِ إلى رعاية متخصصة سأوجّهك إليها بصدق.</p></details>
+    <details><summary data-i="q5">هل تضمنين نتيجة معينة؟</summary><p data-i="a5">لا أعد بنتائج محددة، لكني أعدك بمساحة آمنة ومحترمة ومرافقة صادقة.</p></details>
+    <details><summary data-i="q6">ماذا لو كنت في حالة طوارئ؟</summary><p data-i="a6">إن كنتِ في خطر أو أزمة حادة، تواصلي فوراً مع خدمات الطوارئ في بلدك أو مع شخص تثقين به.</p></details>
+  </div>
+</div></section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact"><div class="wrap">
+  <span class="eyebrow" style="color:var(--sage)" data-i="c_eye">التواصل والحجز</span>
+  <h2 data-i="c_title">خطوتك الأولى بسيطة</h2>
+  <p class="lead" data-i="c_lead">أرسلي رسالة قصيرة على واتساب، وسأرد عليك بخصوصية واحترام.</p>
+  <a class="btn btn-primary" data-wa href="#contact"><span data-i="c_cta">ابدئي المحادثة على واتساب</span></a>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p data-i="foot1">هذا الموقع للتعريف بخدمات الدعم والإرشاد النفسي، ولا يقدّم تشخيصاً أو علاجاً طبياً، ولا يُعد خدمة طوارئ.</p>
+  <p>© <span id="yr"></span> <span data-i="brand">ميسّم الكيلاني</span></p>
+</div></footer>
+
+<script>
+// Set Maisam's WhatsApp number in international format, digits only (e.g. 9627XXXXXXXX)
+const WA_NUMBER = "962791443446";
+const WA_TEXT = { ar: "مرحباً ميسّم، أود الاستفسار عن جلسة أونلاين.", en: "Hello Maisam, I'd like to ask about an online session." };
+
+const EN = {
+brand:"Maisam Alkelani",n1:"About",n2:"Experience",n3:"Expertise",n4:"Sessions",n5:"FAQ",n6:"Contact",
+h_eye:"Psychological support · Mental wellbeing",h_title:"A calm, safe space to hear yourself, and be heard.",
+h_intro:"I believe our mental health shapes our physical health and quality of life. I offer online psychological support sessions with privacy, respect and no judgment.",
+h_cta1:"Book an online session",h_cta2:"Message on WhatsApp",h_note:"Privacy and confidentiality are central to my work.",
+a_eye:"About Maisam",a_title:"A professional journey rooted in a belief in wellbeing",
+a_quote:"“I believe mental health plays a major role in reflecting on our physical health. That is why I chose to major in mental health and well-being, to help others maintain a healthy mental state, for a better, healthier and happier life.”",
+a_p:"Since 2021 I have worked with children, families and communities in Jordan in counselling, child protection and case management, with King Hussein Foundation, International Medical Corps and JOHUD.",
+b_eye:"Professional background",b_title:"Work experience",loc:"Jordan",loc2:"Jordan",
+t1w:"Aug 2025 – Jan 2026",t1h:"Psychologist",
+t2w:"Sep 2023 – Jun 2025",t2h:"Child Protection Counselor",t2o:"Full-time · Jordan",
+t3w:"Feb 2023 – Sep 2023",t3h:"Psychological Counsellor",
+t4w:"Jul 2022 – Feb 2023",t4h:"Case Manager",
+t5w:"Aug 2021 – Jan 2022",t5h:"Psychological Counsellor",vol:"Volunteer",t5o:"Supporting children and their parents",
+t6w:"Feb 2021 – Jun 2021",t6h:"Psychological Counselor",t6o:"Part-time",
+e_eye:"Areas of expertise",e_title:"Where I have worked and learned",
+e1h:"Counselling & psychological support",e1p:"Listening, accompanying and supporting people through everyday challenges.",
+e2h:"Child protection",e2p:"Field experience supporting children and families within child protection programmes.",
+e3h:"Case management",e3p:"Following cases and preparing care plans with families and relevant parties.",
+e4h:"Children & parents",e4p:"Volunteer work with children with special needs and their families.",
+s_eye:"Services & sessions",s_title:"Online psychological support sessions",
+s_lead:"A space to talk, be listened to and reflect on what's on your mind, at your own pace. Session length, fees and times are agreed together on WhatsApp.",
+s1h:"Introductory session",s1p:"A first conversation to get acquainted and understand what you need.",
+s2h:"Individual support sessions",s2p:"Online counselling and psychological support in a private, confidential space.",
+s3h:"Parent guidance",s3p:"A supportive conversation about accompanying children and parenting challenges.",
+s_note:"These sessions are not offered as medical diagnosis or treatment and do not replace medical or emergency care.",
+p_eye:"My approach",p_title:"Safety first",
+p_p1:"I believe everyone deserves to be heard without judgment. Sessions are built on respect, real listening and confidentiality, moving at your pace, with no pressure and no ready-made promises.",
+p_p2:"Mental and physical health are connected, so we look at the whole picture: your feelings, habits and surroundings.",
+o_eye:"Online sessions",o_title:"How does a session work?",
+o1h:"Message me",o1p:"Reach out on WhatsApp and tell me what times suit you.",
+o2h:"We arrange a time",o2p:"We agree on the time and length, and I send you the session link.",
+o3h:"We meet online",o3p:"From wherever you feel comfortable and private.",
+f_eye:"FAQ",f_title:"Before you begin",
+q1:"Is what I share confidential?",a1:"Yes. Confidentiality is fundamental to my work. What is said stays between us, except where there is a real risk to your safety or others', which I will explain beforehand.",
+q2:"How do I book a session?",a2:"Message me on WhatsApp and we'll agree a suitable time.",
+q3:"How long are sessions and what do they cost?",a3:"Details are agreed together when you get in touch, based on your needs.",
+q4:"Is this therapy or diagnosis?",a4:"No. Sessions are counselling and psychological support, not medical diagnosis or treatment. If you need specialised care I will honestly point you towards it.",
+q5:"Do you guarantee a specific outcome?",a5:"No. I don't promise specific results, but I do promise a safe, respectful space and honest support.",
+q6:"What if I'm in an emergency?",a6:"If you are in danger or acute crisis, contact your local emergency services or someone you trust right away.",
+c_eye:"Contact & booking",c_title:"Your first step is simple",c_lead:"Send a short WhatsApp message and I'll reply with privacy and respect.",c_cta:"Start a conversation on WhatsApp",
+foot1:"This site introduces psychological support and counselling services. It does not provide medical diagnosis or treatment and is not an emergency service."
+};
+const AR={};document.querySelectorAll("[data-i]").forEach(e=>{if(!(e.dataset.i in AR))AR[e.dataset.i]=e.innerHTML});
+let lang=localStorage.getItem("lang")||"ar";
+function waLink(){return WA_NUMBER?`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_TEXT[lang])}`:"#contact"}
+function apply(){
+  const d=lang==="en"?EN:AR;
+  document.documentElement.lang=lang;document.documentElement.dir=lang==="en"?"ltr":"rtl";
+  document.querySelectorAll("[data-i]").forEach(e=>{if(d[e.dataset.i]!==undefined)e.innerHTML=d[e.dataset.i]});
+  document.title=lang==="en"?"Maisam Alkelani | Psychological Support & Wellbeing":"ميسّم الكيلاني | دعم نفسي وصحة نفسية";
+  document.getElementById("lang").textContent=lang==="en"?"العربية":"English";
+  document.querySelectorAll("[data-wa]").forEach(a=>{a.href=waLink();if(WA_NUMBER){a.target="_blank";a.rel="noopener"}});
+}
+document.getElementById("lang").onclick=()=>{lang=lang==="en"?"ar":"en";try{localStorage.setItem("lang",lang)}catch(e){}apply()};
+document.getElementById("yr").textContent=new Date().getFullYear();
+apply();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
